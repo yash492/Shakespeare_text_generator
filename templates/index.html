@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title> Shakespeare </title>
+	</head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<style>
+		h1{
+			padding-bottom: 20px;
+		}
+	</style>
+	<body>
+		<div class="container">
+		<div class="col-md-6">	
+			<h1> Everybody's a Shakespeare! </h1>
+		</div>
+		<div class="col-md-7">	
+			<p> Write some text at the box below, the web app will write some "Shakespeare" for you!</p>
+		</div>
+		<form action="{{ url_for('generate')}}" method="post">
+		<div class="form-group">
+			<div class="col-md-7">
+				<textarea name="text" class="form-control form-control-lg" rows="2"  placeholder="O Romeo, O Romeo, "></textarea>
+			</div>
+			<br>
+			<div class="col-md-7">	
+				<p> Enter number of words you want to generate. By Default, the value is 35. For swift results, it is recommended to keep the value less than 50.</p>
+			</div>
+			<div class="col-md-2">
+				<input type="number" class ="form-control" name="nextstep" min="1" max="100"  placeholder="35">
+				<br>	
+			</div>		
+			<div class="col-md-3">	
+				<input type="submit" class="btn btn-primary" value="Generate">
+			</div>
+		</form>
+		<br>
+		<div class="col-md-9">	
+			<div class="card w-75">
+				<div class="card-body">
+				<h5 class="card-title">{{ result }}</h5>
+	      <p class="card-text">{{ prediction }}.</p>
+	    	</div>
+		  </div>
+	 </div>
+	</body>
+</html>
