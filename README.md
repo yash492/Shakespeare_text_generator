@@ -1,2 +1,2 @@
 # Shakespeare_text_generator
-[Shakespeare Text generator using LSTM] (https://shakespearetext.herokuapp.com/)
+[Shakespeare Text generator using LSTM] (https://shakespeare-generator.herokuapp.com/)
